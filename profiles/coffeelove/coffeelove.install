@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for coffeelove profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function coffeelove_install() {
+}
