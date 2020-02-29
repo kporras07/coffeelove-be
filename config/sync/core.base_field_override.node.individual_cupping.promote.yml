@@ -1,0 +1,22 @@
+uuid: 352b52be-f5c6-4a55-9d26-5e791dd7a660
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.individual_cupping
+id: node.individual_cupping.promote
+field_name: promote
+entity_type: node
+bundle: individual_cupping
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,36 @@
+uuid: 712bd793-1681-4c32-ae17-4c63712739dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.brewing_recipe.field_brewing_method
+    - field.field.node.brewing_recipe.field_coffee
+    - field.field.node.brewing_recipe.field_grind_size
+    - field.field.node.brewing_recipe.field_public_recipe
+    - field.field.node.brewing_recipe.field_steps
+    - field.field.node.brewing_recipe.field_temperature
+    - field.field.node.brewing_recipe.field_total_time
+    - field.field.node.brewing_recipe.field_water
+    - node.type.brewing_recipe
+  module:
+    - user
+id: node.brewing_recipe.teaser
+targetEntityType: node
+bundle: brewing_recipe
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_brewing_method: true
+  field_coffee: true
+  field_grind_size: true
+  field_public_recipe: true
+  field_steps: true
+  field_temperature: true
+  field_total_time: true
+  field_water: true

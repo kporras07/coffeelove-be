@@ -1,0 +1,26 @@
+uuid: d385b15b-fd0b-4be4-a788-bdbc8d325a78
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cupping_session.field_individual_cuppings
+    - field.field.node.cupping_session.field_session_description
+    - field.field.node.cupping_session.field_session_id
+    - node.type.cupping_session
+  module:
+    - user
+id: node.cupping_session.teaser
+targetEntityType: node
+bundle: cupping_session
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_individual_cuppings: true
+  field_session_description: true
+  field_session_id: true

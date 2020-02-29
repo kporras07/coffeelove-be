@@ -1,0 +1,28 @@
+uuid: 655c713a-c7d3-44b9-8c5f-e49e0190ec7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
+    - taxonomy.vocabulary.brewing_methods
+id: taxonomy_term.brewing_methods.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: brewing_methods
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

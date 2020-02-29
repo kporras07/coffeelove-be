@@ -1,0 +1,18 @@
+uuid: 8561eb69-d957-4881-8d87-828af1b3d03d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_public_recipe
+field_name: field_public_recipe
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

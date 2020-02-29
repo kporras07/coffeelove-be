@@ -1,0 +1,159 @@
+uuid: 55387ea7-7842-4cd4-b73c-f50f3e8e3dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cupping_sample.field_acidity
+    - field.field.paragraph.cupping_sample.field_aftertaste
+    - field.field.paragraph.cupping_sample.field_balance
+    - field.field.paragraph.cupping_sample.field_body
+    - field.field.paragraph.cupping_sample.field_clean_cup
+    - field.field.paragraph.cupping_sample.field_clean_cup_data
+    - field.field.paragraph.cupping_sample.field_defect_cups
+    - field.field.paragraph.cupping_sample.field_defects_intensity
+    - field.field.paragraph.cupping_sample.field_flavour
+    - field.field.paragraph.cupping_sample.field_fragance_aroma
+    - field.field.paragraph.cupping_sample.field_notes
+    - field.field.paragraph.cupping_sample.field_overall
+    - field.field.paragraph.cupping_sample.field_sweetness
+    - field.field.paragraph.cupping_sample.field_sweetness_data
+    - field.field.paragraph.cupping_sample.field_uniformity
+    - field.field.paragraph.cupping_sample.field_uniformity_data
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.default
+targetEntityType: paragraph
+bundle: cupping_sample
+mode: default
+content:
+  field_acidity:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_aftertaste:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_balance:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_body:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_clean_cup:
+    weight: 14
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_clean_cup_data:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_defect_cups:
+    weight: 17
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_defects_intensity:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_flavour:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_fragance_aroma:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_notes:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_overall:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sweetness:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_sweetness_data:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_uniformity:
+    weight: 19
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_uniformity_data:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

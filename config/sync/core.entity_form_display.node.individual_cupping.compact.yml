@@ -1,0 +1,51 @@
+uuid: d8a2b47e-f50f-4a6e-b3a7-9b7bf47968bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.compact
+    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_table
+    - node.type.individual_cupping
+  module:
+    - paragraphs
+id: node.individual_cupping.compact
+targetEntityType: node
+bundle: individual_cupping
+mode: compact
+content:
+  field_cupping_samples:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_table:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

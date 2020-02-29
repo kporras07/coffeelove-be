@@ -1,0 +1,30 @@
+uuid: bc584e8b-5d8f-4c56-8f5b-a3db34adcde5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brewing_recipe_step.field_time
+    - field.field.paragraph.brewing_recipe_step.field_water_amount
+    - paragraphs.paragraphs_type.brewing_recipe_step
+id: paragraph.brewing_recipe_step.default
+targetEntityType: paragraph
+bundle: brewing_recipe_step
+mode: default
+content:
+  field_time:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_water_amount:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,8 @@
+uuid: 20b201f0-ee3b-47b3-aec5-912691d53da8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Brewing Methods'
+vid: brewing_methods
+description: ''
+weight: 0

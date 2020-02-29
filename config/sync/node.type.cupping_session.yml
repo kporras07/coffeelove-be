@@ -1,0 +1,18 @@
+uuid: 9fa0e8e8-7b6b-412d-b63c-9ef7f30e581b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Cupping Session'
+type: cupping_session
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

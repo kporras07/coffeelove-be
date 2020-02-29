@@ -1,0 +1,24 @@
+uuid: 9a86997c-7e28-4313-880f-5c6699b9465c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_table
+    - node.type.individual_cupping
+  module:
+    - user
+id: node.individual_cupping.teaser
+targetEntityType: node
+bundle: individual_cupping
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_cupping_samples: true
+  field_table: true

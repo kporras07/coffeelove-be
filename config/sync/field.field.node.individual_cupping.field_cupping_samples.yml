@@ -1,0 +1,31 @@
+uuid: 1cb9a88c-899e-4ee3-9890-5c858b26b835
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cupping_samples
+    - node.type.individual_cupping
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - entity_reference_revisions
+id: node.individual_cupping.field_cupping_samples
+field_name: field_cupping_samples
+entity_type: node
+bundle: individual_cupping
+label: 'Cupping Samples'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cupping_sample: cupping_sample
+    target_bundles_drag_drop:
+      cupping_sample:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

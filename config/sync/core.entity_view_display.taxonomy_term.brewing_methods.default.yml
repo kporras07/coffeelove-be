@@ -1,0 +1,31 @@
+uuid: cc06e861-b15d-4e58-a888-5bd87f4fec92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.brewing_methods.field_image
+    - taxonomy.vocabulary.brewing_methods
+  module:
+    - text
+id: taxonomy_term.brewing_methods.default
+targetEntityType: taxonomy_term
+bundle: brewing_methods
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

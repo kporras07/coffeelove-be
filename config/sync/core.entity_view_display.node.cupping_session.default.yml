@@ -1,0 +1,45 @@
+uuid: f028db9c-55ea-4e81-8653-225d40e4356e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cupping_session.field_individual_cuppings
+    - field.field.node.cupping_session.field_session_description
+    - field.field.node.cupping_session.field_session_id
+    - node.type.cupping_session
+  module:
+    - user
+id: node.cupping_session.default
+targetEntityType: node
+bundle: cupping_session
+mode: default
+content:
+  field_individual_cuppings:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_session_id:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

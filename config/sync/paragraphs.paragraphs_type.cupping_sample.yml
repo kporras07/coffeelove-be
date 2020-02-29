@@ -1,0 +1,10 @@
+uuid: 9059947e-cffc-43dc-a90c-fd913341c886
+langcode: en
+status: true
+dependencies: {  }
+id: cupping_sample
+label: 'Cupping Sample'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

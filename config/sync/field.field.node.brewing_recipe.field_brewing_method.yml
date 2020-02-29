@@ -1,0 +1,29 @@
+uuid: 16529e9c-1905-449a-829c-870abc2727ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brewing_method
+    - node.type.brewing_recipe
+    - taxonomy.vocabulary.brewing_methods
+id: node.brewing_recipe.field_brewing_method
+field_name: field_brewing_method
+entity_type: node
+bundle: brewing_recipe
+label: 'Brewing Method'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brewing_methods: brewing_methods
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

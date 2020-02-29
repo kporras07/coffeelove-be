@@ -1,0 +1,18 @@
+uuid: 4bc59614-f5c8-4471-8679-c33fbd08d03d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_temperature
+field_name: field_temperature
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

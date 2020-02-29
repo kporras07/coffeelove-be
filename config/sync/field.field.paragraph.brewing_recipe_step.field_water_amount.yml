@@ -1,0 +1,23 @@
+uuid: a30ca222-561c-48d1-8202-4f8812c4e51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_water_amount
+    - paragraphs.paragraphs_type.brewing_recipe_step
+id: paragraph.brewing_recipe_step.field_water_amount
+field_name: field_water_amount
+entity_type: paragraph
+bundle: brewing_recipe_step
+label: 'Water amount'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

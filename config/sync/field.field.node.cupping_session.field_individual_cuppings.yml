@@ -1,0 +1,28 @@
+uuid: 81fbd3fe-2fbf-47d0-944b-1546df7554bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_individual_cuppings
+    - node.type.cupping_session
+    - node.type.individual_cupping
+id: node.cupping_session.field_individual_cuppings
+field_name: field_individual_cuppings
+entity_type: node
+bundle: cupping_session
+label: 'Individual Cuppings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      individual_cupping: individual_cupping
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

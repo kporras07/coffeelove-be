@@ -1,0 +1,21 @@
+uuid: 4e9bbe92-bbc8-4d73-b91f-617c7941a62c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fragance_aroma
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.field_fragance_aroma
+field_name: field_fragance_aroma
+entity_type: paragraph
+bundle: cupping_sample
+label: Fragance/Aroma
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

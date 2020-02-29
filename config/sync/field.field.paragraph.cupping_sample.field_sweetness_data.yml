@@ -1,0 +1,19 @@
+uuid: 0ceade33-49c1-468d-823e-ad018564edce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sweetness_data
+    - paragraphs.paragraphs_type.cupping_sample
+id: paragraph.cupping_sample.field_sweetness_data
+field_name: field_sweetness_data
+entity_type: paragraph
+bundle: cupping_sample
+label: 'Sweetness Data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

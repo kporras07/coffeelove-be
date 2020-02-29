@@ -1,0 +1,39 @@
+uuid: 827f009b-3059-46a8-8627-97a25dd6f8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_table
+    - node.type.individual_cupping
+  module:
+    - entity_reference_revisions
+    - user
+id: node.individual_cupping.default
+targetEntityType: node
+bundle: individual_cupping
+mode: default
+content:
+  field_cupping_samples:
+    type: entity_reference_revisions_entity_view
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_table:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: f9f13ad2-fc88-409f-890f-456a8dee9598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overall
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.field_overall
+field_name: field_overall
+entity_type: paragraph
+bundle: cupping_sample
+label: Overall
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

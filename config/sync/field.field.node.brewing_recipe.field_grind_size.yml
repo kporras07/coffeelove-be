@@ -1,0 +1,29 @@
+uuid: 62b09dac-d389-4062-afbb-0f77841fd054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grind_size
+    - node.type.brewing_recipe
+    - taxonomy.vocabulary.grind_size
+id: node.brewing_recipe.field_grind_size
+field_name: field_grind_size
+entity_type: node
+bundle: brewing_recipe
+label: 'Grind Size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grind_size: grind_size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

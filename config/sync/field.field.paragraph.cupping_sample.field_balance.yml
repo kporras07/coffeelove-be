@@ -1,0 +1,21 @@
+uuid: e5feae3a-ca83-4dc9-bddc-c6833c0fa60f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_balance
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.field_balance
+field_name: field_balance
+entity_type: paragraph
+bundle: cupping_sample
+label: Balance
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

@@ -1,0 +1,23 @@
+uuid: 98ac8f20-d318-4a31-b712-0807ea4cf166
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_recipe
+    - node.type.brewing_recipe
+id: node.brewing_recipe.field_public_recipe
+field_name: field_public_recipe
+entity_type: node
+bundle: brewing_recipe
+label: 'Public recipe'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

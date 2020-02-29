@@ -1,0 +1,23 @@
+uuid: 24c7f613-1f02-418f-b705-c6cb4a1e2498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_time
+    - paragraphs.paragraphs_type.brewing_recipe_step
+id: paragraph.brewing_recipe_step.field_time
+field_name: field_time
+entity_type: paragraph
+bundle: brewing_recipe_step
+label: Time
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: seconds
+field_type: integer

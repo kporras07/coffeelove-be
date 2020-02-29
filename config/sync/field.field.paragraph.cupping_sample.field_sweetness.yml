@@ -1,0 +1,23 @@
+uuid: b83c259f-ec8e-4971-a5dd-98be3bc239cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sweetness
+    - paragraphs.paragraphs_type.cupping_sample
+id: paragraph.cupping_sample.field_sweetness
+field_name: field_sweetness
+entity_type: paragraph
+bundle: cupping_sample
+label: Sweetness
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 10
+  prefix: ''
+  suffix: ''
+field_type: float

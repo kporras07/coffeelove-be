@@ -1,0 +1,138 @@
+uuid: fb2c6135-50b1-4ecf-a350-d59be7ebd729
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cupping_sample.field_acidity
+    - field.field.paragraph.cupping_sample.field_aftertaste
+    - field.field.paragraph.cupping_sample.field_balance
+    - field.field.paragraph.cupping_sample.field_body
+    - field.field.paragraph.cupping_sample.field_clean_cup
+    - field.field.paragraph.cupping_sample.field_clean_cup_data
+    - field.field.paragraph.cupping_sample.field_defect_cups
+    - field.field.paragraph.cupping_sample.field_defects_intensity
+    - field.field.paragraph.cupping_sample.field_flavour
+    - field.field.paragraph.cupping_sample.field_fragance_aroma
+    - field.field.paragraph.cupping_sample.field_notes
+    - field.field.paragraph.cupping_sample.field_overall
+    - field.field.paragraph.cupping_sample.field_sweetness
+    - field.field.paragraph.cupping_sample.field_sweetness_data
+    - field.field.paragraph.cupping_sample.field_uniformity
+    - field.field.paragraph.cupping_sample.field_uniformity_data
+    - paragraphs.paragraphs_type.cupping_sample
+id: paragraph.cupping_sample.default
+targetEntityType: paragraph
+bundle: cupping_sample
+mode: default
+content:
+  field_acidity:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_aftertaste:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_balance:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_body:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_clean_cup:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_clean_cup_data:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_defect_cups:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_defects_intensity:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_flavour:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_fragance_aroma:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_notes:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_overall:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sweetness:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_sweetness_data:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_uniformity:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_uniformity_data:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

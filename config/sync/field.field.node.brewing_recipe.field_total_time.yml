@@ -1,0 +1,23 @@
+uuid: af34c94d-e4eb-434e-9de4-f3e6cfb5f97b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_time
+    - node.type.brewing_recipe
+id: node.brewing_recipe.field_total_time
+field_name: field_total_time
+entity_type: node
+bundle: brewing_recipe
+label: 'Total time'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: seconds
+field_type: integer

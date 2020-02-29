@@ -1,0 +1,23 @@
+uuid: 8e027a0b-a3b0-4520-9d20-917f9a8f82b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_clean_cup
+    - paragraphs.paragraphs_type.cupping_sample
+id: paragraph.cupping_sample.field_clean_cup
+field_name: field_clean_cup
+entity_type: paragraph
+bundle: cupping_sample
+label: 'Clean Cup'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 10
+  prefix: ''
+  suffix: ''
+field_type: float

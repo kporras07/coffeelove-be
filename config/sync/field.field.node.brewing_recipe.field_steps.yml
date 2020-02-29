@@ -1,0 +1,34 @@
+uuid: a5da8afe-0c2f-4b57-8c7e-bfdc9cd10196
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_steps
+    - node.type.brewing_recipe
+    - paragraphs.paragraphs_type.brewing_recipe_step
+  module:
+    - entity_reference_revisions
+id: node.brewing_recipe.field_steps
+field_name: field_steps
+entity_type: node
+bundle: brewing_recipe
+label: Steps
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      brewing_recipe_step: brewing_recipe_step
+    target_bundles_drag_drop:
+      brewing_recipe_step:
+        enabled: true
+        weight: 3
+      cupping_sample:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

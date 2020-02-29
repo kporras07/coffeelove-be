@@ -1,0 +1,72 @@
+uuid: 9fe48da5-4ddd-4325-ad76-b6158e001f10
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_balance
+field_name: field_balance
+entity_type: paragraph
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 6
+      label: '6.00'
+    -
+      value: 6.25
+      label: '6.25'
+    -
+      value: 6.5
+      label: '6.50'
+    -
+      value: 6.75
+      label: '6.75'
+    -
+      value: !!float 7
+      label: '7.00'
+    -
+      value: 7.25
+      label: '7.25'
+    -
+      value: 7.5
+      label: '7.50'
+    -
+      value: 7.75
+      label: '7.75'
+    -
+      value: !!float 8
+      label: '8.00'
+    -
+      value: 8.25
+      label: '8.25'
+    -
+      value: 8.5
+      label: '8.50'
+    -
+      value: 8.75
+      label: '8.75'
+    -
+      value: !!float 9
+      label: '9.00'
+    -
+      value: 9.25
+      label: '9.25'
+    -
+      value: 9.5
+      label: '9.50'
+    -
+      value: 9.75
+      label: '9.75'
+    -
+      value: !!float 10
+      label: '10.00'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

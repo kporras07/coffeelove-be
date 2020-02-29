@@ -1,0 +1,23 @@
+uuid: 7d7f47d8-c356-4c6b-9954-0112edc546bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_water
+    - node.type.brewing_recipe
+id: node.brewing_recipe.field_water
+field_name: field_water
+entity_type: node
+bundle: brewing_recipe
+label: Water
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

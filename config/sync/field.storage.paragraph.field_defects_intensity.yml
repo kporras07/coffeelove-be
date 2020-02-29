@@ -1,0 +1,27 @@
+uuid: 976aaca8-daab-47c8-8a91-c33dd64b4f90
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_defects_intensity
+field_name: field_defects_intensity
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 2
+      label: '2'
+    -
+      value: 4
+      label: '4'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

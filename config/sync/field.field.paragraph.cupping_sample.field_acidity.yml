@@ -1,0 +1,21 @@
+uuid: 65b64c51-c5a4-4058-b298-78e7f91ffe9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acidity
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.field_acidity
+field_name: field_acidity
+entity_type: paragraph
+bundle: cupping_sample
+label: Acidity
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

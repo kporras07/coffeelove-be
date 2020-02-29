@@ -1,0 +1,20 @@
+uuid: b7adc847-a060-4891-b1d9-c956b536cfcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_grind_size
+field_name: field_grind_size
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

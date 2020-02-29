@@ -1,0 +1,10 @@
+uuid: 80a84cf4-3e5c-491b-ad61-8bd26dbb1a45
+langcode: en
+status: true
+dependencies: {  }
+id: brewing_recipe_step
+label: 'Brewing recipe step'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

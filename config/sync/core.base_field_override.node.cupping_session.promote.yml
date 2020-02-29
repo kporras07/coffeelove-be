@@ -1,0 +1,22 @@
+uuid: 15ea9377-cc07-4de4-a130-59429c7c45c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cupping_session
+id: node.cupping_session.promote
+field_name: promote
+entity_type: node
+bundle: cupping_session
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

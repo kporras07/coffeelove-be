@@ -1,0 +1,23 @@
+uuid: 983e0b17-9a99-4ed7-9355-0a7657cd2ee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coffee
+    - node.type.brewing_recipe
+id: node.brewing_recipe.field_coffee
+field_name: field_coffee
+entity_type: node
+bundle: brewing_recipe
+label: Coffee
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

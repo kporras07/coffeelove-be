@@ -1,0 +1,18 @@
+uuid: 148f5cf5-049e-4588-837a-7bad2eed47db
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_uniformity
+field_name: field_uniformity
+entity_type: paragraph
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: f43851dd-1e48-4f27-ae53-735d2ef884b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flavour
+    - paragraphs.paragraphs_type.cupping_sample
+  module:
+    - options
+id: paragraph.cupping_sample.field_flavour
+field_name: field_flavour
+entity_type: paragraph
+bundle: cupping_sample
+label: Flavour
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

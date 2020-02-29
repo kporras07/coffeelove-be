@@ -1,0 +1,19 @@
+uuid: 4822c272-5d6b-4e4b-9735-6ddfedbf62fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_session_description
+field_name: field_session_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
