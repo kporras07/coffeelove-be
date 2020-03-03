@@ -1,0 +1,18 @@
+uuid: 2c594df3-a22f-4fd5-b94d-ead79d94e840
+langcode: en
+status: true
+dependencies:
+  module:
+    - cl_api
+    - hal
+    - user
+id: brewing_methods
+plugin_id: brewing_methods
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - cookie

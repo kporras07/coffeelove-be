@@ -1,0 +1,7 @@
+name: 'Coffee Love API'
+type: module
+description: 'API for Coffee Love'
+core: 8.x
+package: 'coffeelove'
+dependencies:
+  - drupal:rest

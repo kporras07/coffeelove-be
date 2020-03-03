@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains cl_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cl_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cl_api module.
+    case 'help.page.cl_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('API for Coffee Love') . '</p>';
+      return $output;
+
+    default:
+  }
+}
