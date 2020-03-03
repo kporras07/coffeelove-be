@@ -1,0 +1,25 @@
+uuid: 96b4987e-4c02-4d0c-be5e-4d1e894350ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cups_per_sample
+    - node.type.cupping_session
+id: node.cupping_session.field_cups_per_sample
+field_name: field_cups_per_sample
+entity_type: node
+bundle: cupping_session
+label: 'Cups per Sample'
+description: 'SCA protocol requires you use 5 cups per sample'
+required: true
+translatable: false
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings:
+  min: 2
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

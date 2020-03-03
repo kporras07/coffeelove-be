@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: brewing_recipe_step
 label: 'Water amount'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

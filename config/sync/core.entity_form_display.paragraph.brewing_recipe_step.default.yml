@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.brewing_recipe_step.field_description
     - field.field.paragraph.brewing_recipe_step.field_time
     - field.field.paragraph.brewing_recipe_step.field_water_amount
     - paragraphs.paragraphs_type.brewing_recipe_step
@@ -11,6 +12,14 @@ targetEntityType: paragraph
 bundle: brewing_recipe_step
 mode: default
 content:
+  field_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_time:
     weight: 1
     settings:

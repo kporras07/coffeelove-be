@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.compact
+    - field.field.node.cupping_session.field_cups_per_sample
     - field.field.node.cupping_session.field_individual_cuppings
+    - field.field.node.cupping_session.field_samples_number
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
     - node.type.cupping_session
@@ -18,12 +20,19 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cups_per_sample:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_individual_cuppings:
-    weight: 3
+    weight: 5
     settings:
       form_mode: compact
       label_singular: ''
@@ -38,6 +47,13 @@ content:
       allow_duplicate: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_samples_number:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_session_description:
     weight: 2
@@ -57,7 +73,7 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -65,21 +81,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -92,7 +108,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60

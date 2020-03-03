@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.cupping_session.field_cups_per_sample
     - field.field.node.cupping_session.field_individual_cuppings
+    - field.field.node.cupping_session.field_samples_number
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
     - node.type.cupping_session
@@ -14,6 +16,15 @@ targetEntityType: node
 bundle: cupping_session
 mode: default
 content:
+  field_cups_per_sample:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_individual_cuppings:
     weight: 102
     label: above
@@ -21,6 +32,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_samples_number:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_session_description:
     weight: 103
