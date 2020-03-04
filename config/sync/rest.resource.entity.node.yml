@@ -1,6 +1,6 @@
 uuid: 93bb2d37-f6a1-4528-b411-90634baa11cb
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - hal

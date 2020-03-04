@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.cupping_session.field_sample_names
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
-    - field.field.node.cupping_session.field_session_token
     - node.type.cupping_session
   module:
     - inline_entity_form
@@ -67,14 +66,6 @@ content:
     region: content
   field_session_id:
     weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_session_token:
-    weight: 6
     settings:
       size: 60
       placeholder: ''

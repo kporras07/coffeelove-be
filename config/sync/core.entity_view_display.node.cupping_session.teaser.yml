@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.cupping_session.field_sample_names
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
-    - field.field.node.cupping_session.field_session_token
     - node.type.cupping_session
   module:
     - user
@@ -29,4 +28,3 @@ hidden:
   field_sample_names: true
   field_session_description: true
   field_session_id: true
-  field_session_token: true
