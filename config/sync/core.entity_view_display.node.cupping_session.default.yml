@@ -5,9 +5,10 @@ dependencies:
   config:
     - field.field.node.cupping_session.field_cups_per_sample
     - field.field.node.cupping_session.field_individual_cuppings
-    - field.field.node.cupping_session.field_samples_number
+    - field.field.node.cupping_session.field_sample_names
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
+    - field.field.node.cupping_session.field_session_token
     - node.type.cupping_session
   module:
     - user
@@ -33,14 +34,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_samples_number:
-    weight: 104
+  field_sample_names:
+    weight: 106
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
     region: content
   field_session_description:
     weight: 103
@@ -51,6 +51,14 @@ content:
     region: content
   field_session_id:
     weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_session_token:
+    weight: 107
     label: above
     settings:
       link_to_entity: false

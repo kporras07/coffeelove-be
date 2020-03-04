@@ -6,9 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.cupping_session.field_cups_per_sample
     - field.field.node.cupping_session.field_individual_cuppings
-    - field.field.node.cupping_session.field_samples_number
+    - field.field.node.cupping_session.field_sample_names
     - field.field.node.cupping_session.field_session_description
     - field.field.node.cupping_session.field_session_id
+    - field.field.node.cupping_session.field_session_token
     - node.type.cupping_session
   module:
     - user
@@ -25,6 +26,7 @@ content:
 hidden:
   field_cups_per_sample: true
   field_individual_cuppings: true
-  field_samples_number: true
+  field_sample_names: true
   field_session_description: true
   field_session_id: true
+  field_session_token: true

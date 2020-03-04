@@ -1,0 +1,21 @@
+uuid: 54cf8d43-c3d4-437e-a0a2-78053f0b8147
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sample_names
+field_name: field_sample_names
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
