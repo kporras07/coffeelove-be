@@ -1,18 +1,18 @@
-uuid: 1cb9a88c-899e-4ee3-9890-5c858b26b835
+uuid: b85b4fc1-d9e2-403f-8718-a06f439e482c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cupping_samples
+    - field.storage.node.field_cupping_data
     - node.type.individual_cupping
     - paragraphs.paragraphs_type.cupping_sample
   module:
     - entity_reference_revisions
-id: node.individual_cupping.field_cupping_samples
-field_name: field_cupping_samples
+id: node.individual_cupping.field_cupping_data
+field_name: field_cupping_data
 entity_type: node
 bundle: individual_cupping
-label: 'Cupping Samples'
+label: 'Cupping Data'
 description: ''
 required: false
 translatable: false
@@ -25,7 +25,10 @@ settings:
     target_bundles:
       cupping_sample: cupping_sample
     target_bundles_drag_drop:
+      brewing_recipe_step:
+        weight: 3
+        enabled: false
       cupping_sample:
         enabled: true
-        weight: 2
+        weight: 4
 field_type: entity_reference_revisions

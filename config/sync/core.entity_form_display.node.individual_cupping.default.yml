@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_cupping_data
     - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
@@ -20,7 +20,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cupping_samples:
+  field_cupping_data:
     type: entity_reference_paragraphs
     weight: 2
     settings:

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.compact
-    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_cupping_data
     - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
@@ -14,19 +14,19 @@ targetEntityType: node
 bundle: individual_cupping
 mode: compact
 content:
-  field_cupping_samples:
+  field_cupping_data:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 1
+    region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Data
+      title_plural: Data
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: cupping_sample
     third_party_settings: {  }
-    region: content
-  title:
+  field_sample_name:
     type: string_textfield
     weight: 0
     region: content
@@ -36,9 +36,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_sample_name: true
   path: true
   promote: true
   status: true
   sticky: true
+  title: true
   uid: true

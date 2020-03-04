@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_cupping_data
     - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
@@ -20,5 +20,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_cupping_samples: true
+  field_cupping_data: true
   field_sample_name: true

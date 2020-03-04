@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.individual_cupping.field_cupping_samples
+    - field.field.node.individual_cupping.field_cupping_data
     - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
@@ -14,9 +14,9 @@ targetEntityType: node
 bundle: individual_cupping
 mode: default
 content:
-  field_cupping_samples:
+  field_cupping_data:
     type: entity_reference_revisions_entity_view
-    weight: 101
+    weight: 104
     label: above
     settings:
       view_mode: default
