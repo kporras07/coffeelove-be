@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_help().
@@ -20,5 +21,17 @@ function cl_api_help($route_name, RouteMatchInterface $route_match) {
       return $output;
 
     default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function cl_api_node_presave(EntityInterface $entity) {
+  if ($entity->bundle() === 'cupping_session') {
+    if (empty($entity->original)) {
+      // New entity.
+      $entity->field_session_id = uniqid();
+    }
   }
 }
