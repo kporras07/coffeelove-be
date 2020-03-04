@@ -9,9 +9,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access brewing methods resource'
   - 'access content'
-  - 'access grind sizes resource'
   - 'restful get brewing_methods'
   - 'restful get brewing_methods_index'
   - 'restful get grind_sizes'
