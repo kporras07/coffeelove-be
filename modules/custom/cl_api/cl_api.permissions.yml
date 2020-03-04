@@ -4,3 +4,6 @@ access brewing methods resource:
 access grind sizes resource:
   title: 'Access grind sizes resource'
   description: 'Access grind sizes API resource'
+access individual cupping resource post:
+    title: 'Access individual cupping resource post'
+    description: 'Access individual cupping API post'
