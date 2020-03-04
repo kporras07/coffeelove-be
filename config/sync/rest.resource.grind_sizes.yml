@@ -1,0 +1,18 @@
+uuid: bcc7f1c7-5ed8-4ef2-98a0-a58411491b29
+langcode: en
+status: true
+dependencies:
+  module:
+    - cl_api
+    - hal
+    - user
+id: grind_sizes
+plugin_id: grind_sizes
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - cookie

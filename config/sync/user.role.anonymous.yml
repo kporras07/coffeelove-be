@@ -9,5 +9,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access brewing methods resource'
   - 'access content'
+  - 'access grind sizes resource'
   - 'view media'

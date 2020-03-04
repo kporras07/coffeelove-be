@@ -1,0 +1,18 @@
+uuid: 0a5040aa-15f5-44d3-99b3-78ebecfac69e
+langcode: en
+status: true
+dependencies:
+  module:
+    - cl_api
+    - hal
+    - user
+id: grind_sizes_index
+plugin_id: grind_sizes_index
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - cookie
