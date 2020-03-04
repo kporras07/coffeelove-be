@@ -1,3 +1,6 @@
 access brewing methods resource:
   title: 'Access brewing methods resource'
   description: 'Access brewing methods API resource'
+access grind sizes resource:
+  title: 'Access grind sizes resource'
+  description: 'Access grind sizes API resource'

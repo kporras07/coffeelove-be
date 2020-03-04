@@ -10,20 +10,20 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Psr\Log\LoggerInterface;
-use Drupal\cl_api\Helpers\BrewingMethodsHelper;
+use Drupal\cl_api\Helpers\GrindSizesHelper;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "brewing_methods",
- *   label = @Translation("Brewing methods"),
+ *   id = "grind_sizes",
+ *   label = @Translation("Grind sizes"),
  *   uri_paths = {
- *     "canonical" = "/api/brewing-method/{id}"
+ *     "canonical" = "/api/grind-sizes/{id}"
  *   }
  * )
  */
-class BrewingMethods extends ResourceBase {
+class GrindSizes extends ResourceBase {
 
   /**
    * A current user instance.
@@ -100,7 +100,7 @@ class BrewingMethods extends ResourceBase {
    */
   public function get($id = NULL) {
     // Use current user after pass authentication to validate access.
-    if (!$this->currentUser->hasPermission('access brewing methods resource')) {
+    if (!$this->currentUser->hasPermission('access grind sizes resource')) {
       throw new AccessDeniedHttpException();
     }
     else {
@@ -112,7 +112,7 @@ class BrewingMethods extends ResourceBase {
         if (!$taxonomy_term) {
           throw new NotFoundHttpException('Brewing method not found');
         }
-        $data = BrewingMethodsHelper::formatBrewingMethod($taxonomy_term);
+        $data = GrindSizesHelper::formatGrindSizes($taxonomy_term);
         return new ResourceResponse($data, 200);
       }
     }

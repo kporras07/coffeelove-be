@@ -6,24 +6,23 @@ use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Psr\Log\LoggerInterface;
-use Drupal\cl_api\Helpers\BrewingMethodsHelper;
+use Drupal\cl_api\Helpers\GrindSizesHelper;
 
 /**
  * Provides a resource to get view modes by entity and bundle.
  *
  * @RestResource(
- *   id = "brewing_methods",
- *   label = @Translation("Brewing methods"),
+ *   id = "grind_sizes_index",
+ *   label = @Translation("Grind sizes index"),
  *   uri_paths = {
- *     "canonical" = "/api/brewing-method/{id}"
+ *     "canonical" = "/api/grind-sizes"
  *   }
  * )
  */
-class BrewingMethods extends ResourceBase {
+class GrindSizesIndex extends ResourceBase {
 
   /**
    * A current user instance.
@@ -89,32 +88,31 @@ class BrewingMethods extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * @param string $id
-   *   Brewing method id.
-   *
    * @return \Drupal\rest\ResourceResponse
    *   The HTTP response object.
    *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
    */
-  public function get($id = NULL) {
+  public function get() {
     // Use current user after pass authentication to validate access.
-    if (!$this->currentUser->hasPermission('access brewing methods resource')) {
+    if (!$this->currentUser->hasPermission('access grind sizes resource')) {
       throw new AccessDeniedHttpException();
     }
     else {
-      $nodes = NULL;
       $storage = $this->entityTypeManager->getStorage('taxonomy_term');
       $data = [];
-      if ($id) {
-        $taxonomy_term = $storage->load($id);
-        if (!$taxonomy_term) {
-          throw new NotFoundHttpException('Brewing method not found');
+      $query = $storage->getQuery();
+      $query->condition('vid', 'grind_size');
+      $ids = $query->execute();
+      $taxonomy_terms = $storage->loadMultiple($ids);
+      $data = [];
+      if ($taxonomy_terms) {
+        foreach ($taxonomy_terms as $taxonomy_term) {
+          $data[$taxonomy_term->id()] = GrindSizesHelper::formatGrindSizes($taxonomy_term);
         }
-        $data = BrewingMethodsHelper::formatBrewingMethod($taxonomy_term);
-        return new ResourceResponse($data, 200);
       }
+      return new ResourceResponse($data, 200);
     }
   }
 

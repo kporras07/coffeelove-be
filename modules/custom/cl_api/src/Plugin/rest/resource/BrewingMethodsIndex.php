@@ -88,9 +88,6 @@ class BrewingMethodsIndex extends ResourceBase {
   /**
    * Responds to GET requests.
    *
-   * @param string $id
-   *   Brewing method id.
-   *
    * @return \Drupal\rest\ResourceResponse
    *   The HTTP response object.
    *
