@@ -16,4 +16,5 @@ permissions:
   - 'restful get brewing_methods_index'
   - 'restful get grind_sizes'
   - 'restful get grind_sizes_index'
+  - 'restful post user_registration'
   - 'view media'
