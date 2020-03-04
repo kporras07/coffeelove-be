@@ -140,8 +140,25 @@ class IndividualCupping extends ResourceBase {
 
       $title = $this->currentUser->getDisplayName() . '-' . $session_id . '-' . $sample_name;
 
-      $paragraph = Paragraph::create([
-        'type' => 'cupping_sample',
+      $node = $this->getCuppingIndividual($title);
+      $new_individual = FALSE;
+
+      if (!$node) {
+        $paragraph = Paragraph::create([
+          'type' => 'cupping_sample',
+        ]);
+
+        $node = Node::create([
+          'type' => 'individual_cupping',
+        ]);
+
+        $new_individual = TRUE;
+      }
+      else {
+        $paragraph = $node->field_cupping_data->entity;
+      }
+
+      $values = [
         'field_acidity' => [
           'value' => isset($data['acidity']) ? $data['acidity'] : '6.0',
         ],
@@ -190,11 +207,13 @@ class IndividualCupping extends ResourceBase {
         'field_uniformity_data' => [
           'value' => isset($data['uniformity_data']) ? $data['uniformity_data'] : '11111',
         ],
-      ]);
+      ];
+      foreach ($values as $key => $value) {
+        $paragraph->{$key} = $value;
+      }
       $paragraph->save();
 
-      $node = Node::create([
-        'type'        => 'individual_cupping',
+      $node_values = [
         'title'       => $title,
         'field_sample_name' => [
           'value' => $sample_name,
@@ -203,13 +222,18 @@ class IndividualCupping extends ResourceBase {
           'target_id' => $paragraph->id(),
           'target_revision_id' => $paragraph->getRevisionId(),
         ],
-      ]);
+      ];
+      foreach ($node_values as $key => $value) {
+        $node->{$key} = $value;
+      }
       $node->save();
 
-      $session_node->field_individual_cuppings->appendItem($node);
-      $session_node->save();
+      if ($new_individual) {
+        $session_node->field_individual_cuppings->appendItem($node);
+        $session_node->save();
+      }
 
-      return new ResourceResponse(['message' => 'Created successfully'], 201);
+      return new ResourceResponse(['message' => 'Created/Updated successfully'], 201);
     }
   }
 
@@ -222,6 +246,23 @@ class IndividualCupping extends ResourceBase {
       ->condition('status', 1)
       ->condition('type', 'cupping_session')
       ->condition('field_session_id', $session_id)
+      ->execute();
+    if (count($results)) {
+      $result = reset($results);
+      return $this->entityTypeManager->getStorage('node')->load($result);
+    }
+    return NULL;
+  }
+
+  /**
+   * Get cupping individual by title.
+   */
+  protected function getCuppingIndividual($title) {
+    $query = $this->entityTypeManager->getStorage('node');
+    $results = $query->getQuery()
+      ->condition('status', 1)
+      ->condition('type', 'individual_cupping')
+      ->condition('title', $title)
       ->execute();
     if (count($results)) {
       $result = reset($results);
