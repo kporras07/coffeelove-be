@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.individual_cupping.field_cupping_samples
-    - field.field.node.individual_cupping.field_table
+    - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
     - paragraphs
@@ -32,7 +32,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
-  field_table:
+  field_sample_name:
     weight: 1
     settings:
       size: 60

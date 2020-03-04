@@ -1,17 +1,17 @@
-uuid: 03776d2f-8b3c-49b7-87f8-5b038020255f
+uuid: cbac94fd-f18a-4f2e-b2d8-b5b07402d90c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_table
+    - field.storage.node.field_sample_name
     - node.type.individual_cupping
-id: node.individual_cupping.field_table
-field_name: field_table
+id: node.individual_cupping.field_sample_name
+field_name: field_sample_name
 entity_type: node
 bundle: individual_cupping
-label: Table
+label: 'Sample Name'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.individual_cupping.field_cupping_samples
-    - field.field.node.individual_cupping.field_table
+    - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
     - entity_reference_revisions
@@ -23,8 +23,8 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_table:
-    weight: 102
+  field_sample_name:
+    weight: 103
     label: above
     settings:
       link_to_entity: false

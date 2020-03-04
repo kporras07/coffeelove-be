@@ -12,6 +12,7 @@ permissions:
   - 'access brewing methods resource'
   - 'access content'
   - 'access grind sizes resource'
+  - 'access individual cupping resource post'
   - 'create cupping_session content'
   - 'delete own brewing_recipe content'
   - 'edit own brewing_recipe content'

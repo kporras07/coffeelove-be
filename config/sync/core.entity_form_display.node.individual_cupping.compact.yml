@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.node.compact
     - field.field.node.individual_cupping.field_cupping_samples
-    - field.field.node.individual_cupping.field_table
+    - field.field.node.individual_cupping.field_sample_name
     - node.type.individual_cupping
   module:
     - paragraphs
@@ -26,14 +26,6 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
-  field_table:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -44,6 +36,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_sample_name: true
   path: true
   promote: true
   status: true
