@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - cl_api
-    - hal
+    - serialization
     - user
 id: individual_cupping
 plugin_id: individual_cupping
@@ -13,6 +13,6 @@ configuration:
   methods:
     - POST
   formats:
-    - hal_json
+    - json
   authentication:
     - cookie

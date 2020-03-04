@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - cl_api
-    - hal
+    - serialization
     - user
 id: grind_sizes
 plugin_id: grind_sizes
@@ -13,6 +13,6 @@ configuration:
   methods:
     - GET
   formats:
-    - hal_json
+    - json
   authentication:
     - cookie
