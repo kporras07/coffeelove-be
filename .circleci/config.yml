@@ -154,14 +154,14 @@ jobs:
             git config --global user.name $GIT_NAME
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
-            terminus connection:set  coffeelove.dev git
+            terminus connection:set  coffee-love.dev git
             ahoy site deploy master "Auto deploy triggered from master branch"
-            terminus connection:set  coffeelove.dev sftp
-            terminus drush coffeelove.dev -- si coffeelove --account-pass=admin -y
-            terminus connection:set  coffeelove.dev git
-            terminus drush coffeelove.dev -- config-set "system.site" uuid "$SITE_UUID" -y
-            terminus drush coffeelove.dev -- cim -y
-            terminus drush coffeelove.dev -- cr
+            terminus connection:set  coffee-love.dev sftp
+            terminus drush coffee-love.dev -- si coffee-love --account-pass=admin -y
+            terminus connection:set  coffee-love.dev git
+            terminus drush coffee-love.dev -- config-set "system.site" uuid "$SITE_UUID" -y
+            terminus drush coffee-love.dev -- cim -y
+            terminus drush coffee-love.dev -- cr
   deploy-test:
     docker:
       - image: kporras07/docker-drupal-nginx:php-7.2.x
@@ -176,10 +176,10 @@ jobs:
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
             ln -s /var/www/coffeelove/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
-            terminus env:deploy coffeelove.test --note "Autodeploy from Circle" -y
-            terminus drush coffeelove.test -- updb -y
-            terminus drush coffeelove.test -- cim -y
-            terminus drush coffeelove.test -- cr
+            terminus env:deploy coffee-love.test --note "Autodeploy from Circle" -y
+            terminus drush coffee-love.test -- updb -y
+            terminus drush coffee-love.test -- cim -y
+            terminus drush coffee-love.test -- cr
   deploy-live:
     docker:
       - image: kporras07/docker-drupal-nginx:php-7.2.x
