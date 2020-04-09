@@ -1,0 +1,18 @@
+uuid: eaa9f3b6-8c80-47a0-84eb-1383b3ef2d3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - cl_api
+    - serialization
+    - user
+id: cupping_session
+plugin_id: cupping_session
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
