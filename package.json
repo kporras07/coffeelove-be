@@ -7,7 +7,7 @@
     "gulp-if": "^2.0.0",
     "gulp-task-listing": "^1.0.1",
     "gulp-util": "^3.0.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "phplint": "^2.0.1",
     "require-dir": "^0.3.0",
     "sync-exec": "^0.6.2",
